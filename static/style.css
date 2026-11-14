@@ -14,4 +14,34 @@ button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,s
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media(forced-colors:active){button,input,select,textarea,.card,.hint,.member,.status{border:1px solid CanvasText}.btn.primary{background:ButtonFace;color:ButtonText}.nav-item.active{outline:2px solid Highlight}.hero-art{display:none}}
 
-.status-guide ul{margin:8px 0 0;padding-left:22px}.status-guide li{margin:6px 0}.registration-status{border-left:3px solid var(--line);padding-left:12px;margin:14px 0}.registration-status p{margin:6px 0}
+.hero p:last-child,.nav-label,.sidebar-note p,footer{color:var(--muted)}
+.page-heading h2{scroll-margin-top:16px}
+.toolbar{align-items:end;margin-bottom:8px}
+.toolbar .field{flex:1 1 12rem;margin:0;max-width:24rem}
+.toolbar input,.toolbar select{width:100%;max-width:none}
+.page-heading,.form-actions,.actions{flex-wrap:wrap}
+.status,.tag,.meta,.form-note{overflow-wrap:anywhere}
+.card-bottom{justify-content:flex-end}
+.account{flex-wrap:wrap}
+dialog{max-width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px)}
+#page-title:focus,#modal-title:focus,.error:focus{outline:3px solid #164f9e;outline-offset:3px}
+.error:empty{min-height:0;padding:0;margin:0;border:0}
+.error:not(:empty){padding:8px;border:1px solid currentColor;border-radius:4px}
+.error{color:#8a282a}
+button[aria-disabled="true"]{opacity:.65;cursor:wait}
+#toast{pointer-events:none}
+@media(max-width:600px){
+  .nav-item{justify-content:flex-start}
+  .toolbar .field{max-width:none}
+  .workspace{padding:16px 20px}
+  .hero-art{display:none}
+}
+@media(forced-colors:active){
+  .card,.panel,dialog,.status,.tag,.hint,.error:not(:empty),#toast.visible{border:1px solid CanvasText}
+  button,input,select,textarea{border:1px solid ButtonText}
+  .nav-item[aria-current="page"]{outline:none;border:2px solid CanvasText;text-decoration:underline}
+  a{color:LinkText}
+  :where(button,a,input,select,textarea):focus-visible,
+  #page-title:focus,#modal-title:focus,.error:focus{outline:3px solid Highlight;outline-offset:3px}
+  #toast.visible{color:CanvasText;background:Canvas}
+}

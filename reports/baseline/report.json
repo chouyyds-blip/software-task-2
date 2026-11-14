@@ -1,0 +1,16 @@
+{
+  "executedAt": "2026-11-14T13:26:38.992Z",
+  "browser": "Microsoft Edge 157.0.4341.46",
+  "detailNames": [
+    "查看详情 ↗",
+    "查看详情 ↗",
+    "查看详情 ↗"
+  ],
+  "searchHasVisibleLabel": false,
+  "mainContentIsLive": true,
+  "findings": [
+    "多个详情按钮在无障碍树中同名。",
+    "搜索框已有无障碍名称，页面缺少对应的持久可见标签。",
+    "整个正文容器是 live region，缺少独立的结果反馈区域。"
+  ]
+}

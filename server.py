@@ -181,6 +181,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     DB_PATH = args.db.resolve()
     initialize()
-    print(f'竞遇: http://127.0.0.1:{args.port}', flush=True)
-    print('初始账号: admin / zhou，初始密码: Demo123456', flush=True)
-    ThreadingHTTPServer(('127.0.0.1',args.port), Handler).serve_forever()
+    with ThreadingHTTPServer(('127.0.0.1', args.port), Handler) as http:
+        print(f'竞遇: http://127.0.0.1:{http.server_port}', flush=True)
+        print('初始账号: admin / zhou，初始密码: Demo123456', flush=True)
+        http.serve_forever()

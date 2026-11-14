@@ -83,7 +83,7 @@ def _eligibility_locked(db, competition_id):
     return db.execute(
         "SELECT 1 FROM registrations r JOIN teams t ON t.id=r.team_id "
         "WHERE t.competition_id=? LIMIT 1", (competition_id,)
-    ).fetchone()
+    ).fetchone() is not None
 
 
 def handle(ctx, method, path, data):

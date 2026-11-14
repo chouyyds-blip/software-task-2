@@ -1,0 +1,74 @@
+{
+  "executedAt": "2026-11-14T13:26:01.859Z",
+  "browser": "Microsoft Edge 157.0.4341.46",
+  "platform": "Windows 11 Home China",
+  "playwright": "1.62.1",
+  "passed": true,
+  "checks": [
+    "首个 Tab 可跳到正文，搜索与分类键盘可达，数量与空结果通过状态节点反馈。",
+    "详情弹窗按竞赛标题命名，打开后聚焦标题，背景控件在弹窗打开时不可聚焦，关闭后焦点回到原按钮。",
+    "全键盘注册、登录、错误反馈、资料保存、修改密码、退出与重新登录通过；学生发布权限回归通过。",
+    "全键盘发布、编辑、下架竞赛通过，管理员可见已下架文字，退出后访客看不到下架项。",
+    "模拟强制颜色下，导航、焦点和弹窗边界可辨，详情仍可用键盘开关；320 CSS 像素宽列表无页面横向滚动。"
+  ],
+  "accessibilityTree": [
+    {
+      "role": "navigation",
+      "name": "主导航",
+      "properties": {}
+    },
+    {
+      "role": "searchbox",
+      "name": "按竞赛名称搜索",
+      "properties": {
+        "invalid": "false",
+        "focusable": true,
+        "editable": "plaintext",
+        "settable": true
+      }
+    },
+    {
+      "role": "combobox",
+      "name": "竞赛分类",
+      "properties": {
+        "invalid": "false",
+        "focusable": true,
+        "focused": true,
+        "hasPopup": "menu",
+        "expanded": false
+      }
+    },
+    {
+      "role": "button",
+      "name": "查看详情：校园软件创意设计赛",
+      "properties": {
+        "invalid": "false",
+        "focusable": true
+      }
+    },
+    {
+      "role": "dialog",
+      "name": "校园软件创意设计赛",
+      "properties": {
+        "focusable": true,
+        "modal": true
+      }
+    },
+    {
+      "role": "textbox",
+      "name": "报名截止时间",
+      "description": "输入日期或本地日期时间，例如 2099-12-31 或 2099-12-31 23:59。",
+      "properties": {
+        "invalid": "false",
+        "focusable": true,
+        "focused": true,
+        "editable": "plaintext",
+        "settable": true,
+        "multiline": false,
+        "readonly": false,
+        "required": true,
+        "describedby": "deadline-help"
+      }
+    }
+  ]
+}

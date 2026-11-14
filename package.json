@@ -1,0 +1,10 @@
+{
+  "name": "jingyu-accessibility",
+  "private": true,
+  "scripts": {
+    "test": "node tests/accessibility.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
